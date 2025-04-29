@@ -342,53 +342,93 @@ section {
     font-size: 17px;
 }
 
-.entrepreneurial-qualities {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.entrepreneurial-projects {
+    display: flex;
+    flex-direction: column;
     gap: 30px;
-    margin-top: 20px;
 }
 
-.quality-item {
-    display: flex;
-    align-items: flex-start;
+.entrepreneurial-project {
     background-color: white;
-    padding: 25px;
     border-radius: 15px;
+    overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
     transition: var(--transition);
 }
 
-.quality-item:hover {
+.entrepreneurial-project:hover {
     transform: translateY(-5px);
     box-shadow: var(--shadow);
 }
 
-.quality-icon {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: rgba(74, 108, 247, 0.1);
+.project-header {
     display: flex;
     align-items: center;
+    padding: 20px 25px;
+    background-color: rgba(74, 108, 247, 0.05);
+    border-bottom: 1px solid rgba(74, 108, 247, 0.1);
+}
+
+.project-emoji {
+    font-size: 30px;
+    margin-right: 15px;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
     justify-content: center;
-    margin-right: 20px;
-    flex-shrink: 0;
+    align-items: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
 }
 
-.quality-icon i {
-    color: var(--primary-color);
-    font-size: 28px;
-}
-
-.quality-info h3 {
+.project-header h3 {
+    margin: 0;
     font-size: 20px;
-    margin-bottom: 10px;
+    color: var(--primary-color);
 }
 
-.quality-info p {
-    color: var(--light-text);
-    font-size: 15px;
+.project-content {
+    padding: 25px;
+}
+
+.project-content > p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.project-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.detail {
+    display: flex;
+    align-items: flex-start;
+    min-width: 250px;
+    flex: 1;
+}
+
+.detail i {
+    font-size: 18px;
+    color: var(--primary-color);
+    margin-right: 10px;
+    margin-top: 3px;
+}
+
+.detail p {
+    margin: 0;
+}
+
+.detail ul {
+    margin: 10px 0 0 28px;
+    padding: 0;
+    list-style-type: disc;
+}
+
+.detail ul li {
+    margin-bottom: 5px;
 }
 
 /* Skills Section Styles */
@@ -776,7 +816,7 @@ section {
         width: 100%;
     }
 
-    .entrepreneurial-qualities {
+    .entrepreneurial-projects {
         grid-template-columns: 1fr;
     }
 }
@@ -836,21 +876,27 @@ section {
         text-align: center;
     }
 
-    .quality-item {
+    .project-header {
+        padding: 15px 20px;
+    }
+
+    .project-emoji {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+    }
+
+    .project-header h3 {
+        font-size: 18px;
+    }
+
+    .project-content {
         padding: 20px;
     }
 
-    .quality-icon {
-        width: 50px;
-        height: 50px;
-    }
-
-    .quality-icon i {
-        font-size: 22px;
-    }
-
-    .quality-info h3 {
-        font-size: 18px;
+    .project-details {
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
@@ -880,12 +926,14 @@ section {
         text-align: left;
     }
 
-    .quality-item {
-        flex-direction: column;
+    .project-emoji {
+        font-size: 20px;
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
     }
 
-    .quality-icon {
-        margin-bottom: 15px;
-        margin-right: 0;
+    .project-header h3 {
+        font-size: 16px;
     }
 } 
