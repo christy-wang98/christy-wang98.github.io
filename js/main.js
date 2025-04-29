@@ -141,37 +141,6 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // Skill bar animation
-    const skillItems = document.querySelectorAll('.skill-item');
+    // Skill bar animation code removed (since Skills section has been removed)
     
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-    
-    function animateSkills() {
-        skillItems.forEach(item => {
-            if (isInViewport(item)) {
-                const progressBar = item.querySelector('.skill-progress');
-                const width = progressBar.style.width;
-                
-                progressBar.style.width = '0';
-                setTimeout(() => {
-                    progressBar.style.transition = 'width 1s ease-in-out';
-                    progressBar.style.width = width;
-                }, 100);
-            }
-        });
-    }
-    
-    // Initial animation
-    setTimeout(animateSkills, 500);
-    
-    // Check on scroll
-    window.addEventListener('scroll', animateSkills);
 }); 
