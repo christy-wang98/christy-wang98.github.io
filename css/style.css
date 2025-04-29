@@ -1026,6 +1026,19 @@ section {
     .linkedin-card h3 {
         font-size: 20px;
     }
+
+    .hobby-item {
+        padding: 20px;
+    }
+    
+    .hobby-icon {
+        font-size: 35px;
+    }
+    
+    .hobby-item h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -1073,4 +1086,74 @@ section {
         flex-direction: column;
         gap: 10px;
     }
+
+    .hobby-icon {
+        font-size: 30px;
+    }
+    
+    .hobby-item h3 {
+        font-size: 18px;
+    }
+    
+    .hobby-description p {
+        font-size: 15px;
+    }
+}
+
+/* Life Beyond Work Section Styles */
+.life-beyond-work {
+    background-color: var(--light-bg);
+    padding-bottom: 80px;
+}
+
+.life-beyond-work-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.hobby-item {
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.hobby-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.hobby-icon {
+    font-size: 40px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.hobby-item h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    position: relative;
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.hobby-item h3::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: var(--primary-color);
+}
+
+.hobby-description p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+    color: var(--text-color);
 } 
