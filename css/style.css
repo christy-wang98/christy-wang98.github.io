@@ -711,6 +711,29 @@ section {
     font-size: 16px;
 }
 
+.timeline-company {
+    color: var(--light-text);
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+.timeline-details {
+    list-style-position: outside;
+    padding-left: 20px;
+    margin-top: 8px;
+    margin-bottom: 0;
+}
+
+.timeline-details li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+    position: relative;
+}
+
+.timeline-details li:last-child {
+    margin-bottom: 0;
+}
+
 /* Contact Section Styles */
 .contact {
     background-color: white;
