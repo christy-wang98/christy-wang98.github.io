@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 导航栏滚动效果
+    // Navigation bar scroll effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 50) {
@@ -11,16 +11,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // 移动端导航菜单切换
+    // Mobile navigation menu toggle
     const burger = document.querySelector('.burger');
     const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-links li');
 
     burger.addEventListener('click', function() {
-        // 切换导航菜单
+        // Toggle navigation menu
         nav.classList.toggle('nav-active');
         
-        // 动画效果
+        // Animation effect
         navLinks.forEach((link, index) => {
             if (link.style.animation) {
                 link.style.animation = '';
@@ -29,11 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         
-        // 汉堡图标动画
+        // Burger icon animation
         burger.classList.toggle('toggle');
     });
 
-    // 点击导航链接时关闭菜单
+    // Close menu when nav link is clicked
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('nav-active');
@@ -45,22 +45,22 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 项目筛选功能
+    // Project filtering functionality
     const filterBtns = document.querySelectorAll('.filter-btn');
     const projectCards = document.querySelectorAll('.project-card');
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', function() {
-            // 移除所有按钮的active类
+            // Remove active class from all buttons
             filterBtns.forEach(btn => btn.classList.remove('active'));
             
-            // 给当前按钮添加active类
+            // Add active class to current button
             this.classList.add('active');
             
-            // 获取筛选类别
+            // Get filter category
             const filterValue = this.getAttribute('data-filter');
             
-            // 筛选项目卡片
+            // Filter project cards
             projectCards.forEach(card => {
                 if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
                     card.style.display = 'block';
@@ -71,13 +71,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 联系表单提交
+    // Contact form submission
     const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // 获取表单数据
+            // Get form data
             const formData = {
                 name: document.getElementById('name').value,
                 email: document.getElementById('email').value,
@@ -85,16 +85,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 message: document.getElementById('message').value
             };
             
-            // 这里应该是发送表单数据到服务器的代码
-            // 由于这是静态网站，我们只是模拟提交成功
-            alert('感谢您的留言！在静态网站中，此表单实际上不会发送数据。若要实现真正的表单提交功能，您需要添加相应的后端服务。');
+            // This is where you would send form data to the server
+            // Since this is a static website, we're just simulating a successful submission
+            alert('Thank you for your message! On a static website, this form does not actually send data. To implement actual form submission, you would need to add backend services.');
             
-            // 重置表单
+            // Reset form
             contactForm.reset();
         });
     }
 
-    // 平滑滚动到锚点
+    // Smooth scroll to anchors
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -104,10 +104,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // 汉堡菜单图标动画
+    // Burger menu icon animation
     burger.classList.add('burger-animation');
 
-    // 添加CSS动画
+    // Add CSS animation
     const style = document.createElement('style');
     style.textContent = `
         @keyframes navLinkFade {
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
 
-    // 技能条动画
+    // Skill bar animation
     const skillItems = document.querySelectorAll('.skill-item');
     
     function isInViewport(element) {
@@ -169,9 +169,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // 初始动画
+    // Initial animation
     setTimeout(animateSkills, 500);
     
-    // 滚动时检查
+    // Check on scroll
     window.addEventListener('scroll', animateSkills);
 }); 
