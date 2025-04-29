@@ -320,6 +320,77 @@ section {
     margin-bottom: 5px;
 }
 
+/* Entrepreneurial Spirit Section Styles */
+.entrepreneurial {
+    background-color: var(--light-bg);
+}
+
+.entrepreneurial-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.entrepreneurial-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.entrepreneurial-text p {
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+
+.entrepreneurial-qualities {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.quality-item {
+    display: flex;
+    align-items: flex-start;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.quality-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.quality-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(74, 108, 247, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    flex-shrink: 0;
+}
+
+.quality-icon i {
+    color: var(--primary-color);
+    font-size: 28px;
+}
+
+.quality-info h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.quality-info p {
+    color: var(--light-text);
+    font-size: 15px;
+}
+
 /* Skills Section Styles */
 .skills {
     background-color: var(--light-bg);
@@ -704,6 +775,10 @@ section {
     .detail-item {
         width: 100%;
     }
+
+    .entrepreneurial-qualities {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -760,6 +835,23 @@ section {
         flex-direction: column;
         text-align: center;
     }
+
+    .quality-item {
+        padding: 20px;
+    }
+
+    .quality-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .quality-icon i {
+        font-size: 22px;
+    }
+
+    .quality-info h3 {
+        font-size: 18px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -782,5 +874,18 @@ section {
     
     .btn {
         padding: 10px 25px;
+    }
+
+    .entrepreneurial-text {
+        text-align: left;
+    }
+
+    .quality-item {
+        flex-direction: column;
+    }
+
+    .quality-icon {
+        margin-bottom: 15px;
+        margin-right: 0;
     }
 } 
