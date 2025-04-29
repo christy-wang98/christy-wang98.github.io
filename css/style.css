@@ -678,11 +678,14 @@ section {
 
 .contact-content {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 40px;
+    width: 100%;
 }
 
 .contact-info {
-    max-width: 600px;
+    max-width: 500px;
     width: 100%;
 }
 
@@ -698,22 +701,52 @@ section {
     margin-bottom: 30px;
 }
 
-.contact-icon {
-    width: 50px;
-    height: 50px;
-    background-color: var(--light-bg);
-    color: var(--primary-color);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.contact-item i {
     font-size: 24px;
+    color: var(--primary-color);
     margin-right: 15px;
+    width: 30px;
+    text-align: center;
 }
 
-.contact-text h4 {
-    margin-bottom: 5px;
-    font-size: 18px;
+/* LinkedIn Card Styles */
+.linkedin-card {
+    max-width: 500px;
+    width: 100%;
+    background-color: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.linkedin-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.linkedin-logo {
+    width: 70px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.linkedin-card h3 {
+    color: #0077B5;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.linkedin-card p {
+    margin-bottom: 25px;
+    color: var(--light-text);
+}
+
+.linkedin-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
 .social-links {
@@ -904,6 +937,18 @@ section {
         flex-direction: column;
         gap: 15px;
     }
+
+    .linkedin-card {
+        padding: 25px;
+    }
+
+    .linkedin-logo {
+        width: 60px;
+    }
+
+    .linkedin-card h3 {
+        font-size: 20px;
+    }
 }
 
 @media screen and (max-width: 576px) {
@@ -941,5 +986,14 @@ section {
 
     .project-header h3 {
         font-size: 16px;
+    }
+
+    .linkedin-card {
+        padding: 20px;
+    }
+
+    .linkedin-buttons {
+        flex-direction: column;
+        gap: 10px;
     }
 } 
