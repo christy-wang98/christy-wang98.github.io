@@ -318,6 +318,21 @@
         </div>
     </section>
 
+    <!-- LinkedIn Badge Section -->
+    <section class="linkedin-badge" style="background-color: #f3f6f8; padding: 50px 0;">
+        <div class="section-container">
+            <div style="max-width: 600px; margin: 0 auto; text-align: center; background-color: white; border-radius: 10px; padding: 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn Logo" style="width: 60px; height: auto; margin-bottom: 20px;">
+                <h3 style="color: #0077B5; margin-bottom: 15px;">Connect with me on LinkedIn</h3>
+                <p style="margin-bottom: 20px; color: #555;">My professional profile: <strong>linkedin.com/in/chunyan-wang</strong></p>
+                <div style="display: flex; justify-content: center; gap: 10px;">
+                    <button onclick="openLinkedIn(event)" style="padding: 10px 20px; background-color: #0077B5; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Visit Profile</button>
+                    <button onclick="copyLinkedInUrl()" style="padding: 10px 20px; background-color: white; color: #0077B5; border: 1px solid #0077B5; border-radius: 5px; cursor: pointer; font-weight: bold;">Copy URL</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="section-container">
@@ -336,7 +351,7 @@
                         </div>
                         <div class="contact-item">
                             <i class="bi bi-linkedin"></i>
-                            <p><a href="https://linkedin.com/in/chunyan-wang" target="_blank" rel="noopener noreferrer">LinkedIn Profile</a></p>
+                            <p>LinkedIn: <span style="font-weight:500;">linkedin.com/in/chunyan-wang</span> <button onclick="copyLinkedInUrl()" class="copy-btn" style="padding:2px 8px; font-size:12px; background:#0077B5; color:white; border:none; border-radius:3px; cursor:pointer; margin-left:5px;">Copy</button></p>
                         </div>
                         <div class="contact-item">
                             <i class="bi bi-github"></i>
@@ -382,7 +397,7 @@
                 </ul>
             </div>
             <div class="footer-social">
-                <a href="https://linkedin.com/in/chunyan-wang" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+                <a onclick="openLinkedIn(event)" style="cursor:pointer;"><i class="bi bi-linkedin"></i></a>
                 <a href="https://github.com/christy-wang98" target="_blank"><i class="bi bi-github"></i></a>
                 <a href="#"><i class="bi bi-twitter"></i></a>
                 <a href="mailto:christychu28@gmail.com"><i class="bi bi-envelope"></i></a>
@@ -395,5 +410,35 @@
 
     <!-- JavaScript -->
     <script src="js/main.js"></script>
+    <script>
+    function copyLinkedInUrl() {
+        navigator.clipboard.writeText("https://linkedin.com/in/chunyan-wang").then(function() {
+            alert("LinkedIn URL copied to clipboard!");
+        }, function() {
+            alert("Copy failed. Please manually copy: linkedin.com/in/chunyan-wang");
+        });
+    }
+    
+    function openLinkedIn(e) {
+        e.preventDefault();
+        // 使用多种方法尝试打开LinkedIn
+        var linkedInUrl = "https://linkedin.com/in/chunyan-wang";
+        
+        // 方法1: 使用window.open，这是最常用的方法
+        var newWindow = window.open(linkedInUrl, '_blank');
+        
+        // 如果window.open被阻止，提供后备方案
+        if (!newWindow || newWindow.closed || typeof newWindow.closed=='undefined') {
+            // 方法2: 提示用户手动复制URL
+            if (confirm("LinkedIn窗口打开失败。是否复制LinkedIn地址到剪贴板？")) {
+                navigator.clipboard.writeText(linkedInUrl).then(function() {
+                    alert("LinkedIn URL已复制到剪贴板，请手动粘贴到浏览器地址栏。");
+                }, function() {
+                    alert("复制失败。请手动复制: linkedin.com/in/chunyan-wang");
+                });
+            }
+        }
+    }
+    </script>
 </body>
 </html> 
