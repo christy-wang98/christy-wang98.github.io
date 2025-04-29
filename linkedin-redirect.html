@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting to LinkedIn Profile</title>
+    <meta http-equiv="refresh" content="0; URL=https://www.linkedin.com/in/chunyan-wang">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #0077B5;
+        }
+        .redirect-message {
+            margin: 20px 0;
+        }
+        .manual-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #0077B5;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Redirecting to LinkedIn</h1>
+        <div class="redirect-message">
+            <p>You are being redirected to Chunyan (Christy) Wang's LinkedIn profile.</p>
+            <p>If you are not redirected automatically, please click the link below:</p>
+        </div>
+        <a href="https://www.linkedin.com/in/chunyan-wang" class="manual-link">Go to LinkedIn Profile</a>
+    </div>
+    <script>
+        // Additional JavaScript to ensure redirection works
+        window.onload = function() {
+            window.location.href = "https://www.linkedin.com/in/chunyan-wang";
+        }
+    </script>
+</body>
+</html> 
