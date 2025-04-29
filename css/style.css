@@ -1,4 +1,4 @@
-/* 全局样式和变量 */
+/* Global styles and variables - Updated April 29, 2023 */
 :root {
     --primary-color: #4a6cf7;
     --primary-dark: #3755d8;
@@ -118,7 +118,7 @@ section {
     color: var(--primary-color);
 }
 
-/* 导航栏样式 */
+/* Navigation Bar Styles */
 .navbar {
     position: fixed;
     top: 0;
@@ -175,7 +175,7 @@ section {
     transition: var(--transition);
 }
 
-/* Hero 部分样式 */
+/* Hero Section Styles */
 .hero {
     height: 100vh;
     display: flex;
@@ -247,7 +247,7 @@ section {
     color: #cccccc;
 }
 
-/* 关于部分样式 */
+/* About Section Styles */
 .about {
     background-color: white;
 }
@@ -309,7 +309,7 @@ section {
     margin-bottom: 5px;
 }
 
-/* 技能部分样式 */
+/* Skills Section Styles */
 .skills {
     background-color: var(--light-bg);
 }
@@ -362,7 +362,7 @@ section {
     border-radius: 5px;
 }
 
-/* 项目部分样式 */
+/* Projects Section Styles */
 .projects {
     background-color: white;
 }
@@ -467,7 +467,7 @@ section {
     text-decoration: underline;
 }
 
-/* 经历部分样式 */
+/* Experience Section Styles */
 .experience {
     background-color: var(--light-bg);
 }
@@ -543,7 +543,7 @@ section {
     font-size: 16px;
 }
 
-/* 联系部分样式 */
+/* Contact Section Styles */
 .contact {
     background-color: white;
 }
@@ -638,7 +638,7 @@ section {
     box-shadow: 0 0 0 3px rgba(74, 108, 247, 0.2);
 }
 
-/* 页脚样式 */
+/* Footer Section Styles */
 .footer {
     background-color: var(--secondary-color);
     color: white;
@@ -670,7 +670,7 @@ section {
     color: var(--primary-color);
 }
 
-/* 响应式设计 */
+/* Responsive Design Styles */
 @media screen and (max-width: 992px) {
     .hero-container {
         flex-direction: column;
